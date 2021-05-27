@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: 'Gotham',sans-serif
+}
+
+header {
+  height:50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header a {
+  color: #000;
+  text-decoration: none;
+}
+
+header .logo img {
+  width:120px;
+  height: 24px;
+  object-fit: contain;
+}
+
+header .logo {
+  flex:1;
+}
+
+header .menu-middle {
+  flex: 2;
+}
+
+header .menu-right {
+  display:flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.menu-middle ul,
+.menu-right ul{
+  display:flex;
+}
+
+.menu-middle li,
+.menu-right li{
+  font-size:14px;
+  font-family: 'Gotham Medium',sans-serif;
+  margin: 0 10px;
+  list-style: none;
+}
+
+header .menu-right img {
+  width:18px;
+  height:18px;
+}
+/* MAIN */
+main {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  background-image: url('../images/bg.jpg');
+}
+
+main .info {
+  height: 45vh;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+main .info h1 {
+  color: #393c41;
+  font-size:40px;
+  font-weight: normal;
+  padding:4px 0px;
+}
+
+main .info h2 {
+  color: #393c41;
+  font-size: 14px;
+  font-weight:normal;
+  font-family: 'GothamBook',sans-serif;
+}
+
+main .info a {
+  color: #393c41;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  left:0;
+  bottom:30px;
+  right: 0;
+}
+footer .buttons-area {
+  display: flex;
+  justify-content: center;
+}
+
+footer .buttons-area a {
+  display: block;
+  width:220px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 15px; 
+  border-radius: 30px;
+  margin: 0 10px;
+}
+
+footer .buttons-area .btn-dark {
+  background-color:#171a20;
+  color: #fff;
+}
+
+footer .buttons-area .btn-light {
+  background-color:#FFFFFFA6;
+  color: #000;
+}
+
+footer .arrow-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  height:30px;
+}
+
+@keyframes arrow {
+  0% {
+    margin-top:0px;
+  }
+  50% {
+    margin-top:15px;
+  }
+  100% {
+    margin-top:0px;
+  }
+}
+
+footer .arrow-area img{
+  width: 20px;height: 15px;
+  animation-name: arrow;
+  animation-duration:2s;
+  animation-iteration-count: infinite;
+}
+
+/* Medias Queries */
+
+@media (max-width: 1024px) {
+  .menu-middle,
+  .menu-right ul li:nth-child(1),
+  .menu-right ul li:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width:425px) {
+  main {
+    width: 100vw;
+    background-position: center center;
+  }
+  footer .buttons-area{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+  }
+  footer .buttons-area a {
+    margin: 10px 0;
+  }
+}
